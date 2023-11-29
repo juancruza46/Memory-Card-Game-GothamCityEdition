@@ -39,21 +39,41 @@
         // game over
     //else try again
 
+//WIN OR LOSE
 //display you lost 
 //new game button
-
-
 //if all cards have been matched, display : game over you won
 //new game button
+    //function render ()
+    //if winner === matchedAll 
+    //text inner html (Winner) 
+        //display points, time, attempts
+    //else inner html (loser)
+        //display points, time, attempts
 
 //create a timer of 5 minutes
 //if 5 minutes is reached and cards have not been matched, despite amount of errors display game over you lose 
 //new game button
- 
+    
 //display timer 5 minutes: counts down
-
+    //constant timer id = set interval 
+    //count -- minus
+    //if count is truthy take action
+    //else take another action
+    //use the style.visibility to hide timer
+    //milliseconds unit
+    
 //display wins if win +1
-
 //dispay losses + 1
+//determine if you won or lost
+    //reults will be w ond l
+    //winner === 
+
+    //function render scores ()
+    //winner ===t
+    //if results === x , return t
+
+
+
 
 //show score? perhaps +xamt points per match
