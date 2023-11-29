@@ -29,3 +29,11 @@
 //create a timer of 5 minutes
 //if 5 minutes is reached and cards have not been matched, despite amount of errors display game over you lose 
 //new game button
+ 
+//display timer 5 minutes: counts down
+
+//display wins if win +1
+
+//dispay losses + 1
+
+//show score? perhaps +xamt points per match
