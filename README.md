@@ -1,13 +1,45 @@
 # concentration-project
+
 Title : Concentration Memorry Game 
 About : Concentration is a memory game, in which a player has cards faced down in front of them, and have to flip over two at a time in search of a match. (Can be rounc bases if other players are active) The game is over, when all cards have been matched or the player has run out of turns.
 
 // --------------------------------
+
 Technologies used:
 HTML5
 CSS
 Javascript 
+
 // --------------------------------
+
+User Stories:
+As a user I woulld like to :
+    - enter my name before launching a new game
+    - choose the color of the cards (theme)
+    - start a new game once I click the button
+    - be allowed to choose any 12 cards, in whichever order
+    - I would like to accumulate points for every match I earn
+    - I would like to keep track of : time left, remining guesses, wins/losses
+    - If i win i would like to see: points earned, time spare, winner screen with my name
+    - If i lose i would like to see: points earned, time left, guesses left, and reason for losing displayed
+    - Upon the game over screen, I would like the option to return to menu or start a new gane 
+
+//----------------------------------------------------------------
+
+URL wire fram: https://imgur.com/a/5W1gH37
+
+1. displays menu - new game button
+2. cards shuffled
+3. game started, 4 guesses left, w, l, timer
+4. game over: too slow (timer up)
+5. last cards matched
+6. winner display
+7. Guesses remaining 0 ; 
+8. display game over loser
+
+// need to add new game button after game over screen is displayed
+
+//----------------------------------------------------------------
 
 Pseudocode:
 Create boilerplate for HTML ; create JS ; create CSS file
@@ -45,32 +77,4 @@ Display timer at all times
 keep track of total games won/lost
 prompt user for a name 
 style cards with number ; animation
-
-////////////////////////////////
-
-URL wire fram: https://imgur.com/a/5W1gH37
-
-1. displays menu - new game button
-2. cards shuffled
-3. game started, 4 guesses left, w, l, timer
-4. game over: too slow (timer up)
-5. last cards matched
-6. winner display
-7. Guesses remaining 0 ; 
-8. display game over loser
-
-// need to add new game button after game over screen is displayed
-//----------------------------------------------------------------
-
-User Stories:
-As a user I woulld like to :
-    - enter my name before launching a new game
-    - choose the color of the cards (theme)
-    - start a new game once I click the button
-    - be allowed to choose any 12 cards, in whichever order
-    - I would like to accumulate points for every match I earn
-    - I would like to keep track of : time left, remining guesses, wins/losses
-    - If i win i would like to see: points earned, time spare, winner screen with my name
-    - If i lose i would like to see: points earned, time left, guesses left, and reason for losing displayed
-    - Upon the game over screen, I would like the option to return to menu or start a new gane 
 
