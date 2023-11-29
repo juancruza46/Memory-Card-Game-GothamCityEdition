@@ -1,9 +1,5 @@
 //start menu 
 
-//prompt user for a name 
-    //let userName = prompt('What is your name?');
-
-
 //start ganme button/hide event listener
     //document.getElementBYID"startButtonr".addEventListener("click", handleMove)
 
@@ -29,7 +25,7 @@
 //if not a match, flip over again, prmpt user to try again
     //if (===)
        // return : x 
-       // x= points scored & css will hide cards
+       // Display "match" message ! & hide
         //else flip back over, minus one guess 
 
 //the player will have a total of 5 errors
@@ -62,7 +58,7 @@
     //else take another action
     //use the style.visibility to hide timer
     //milliseconds unit
-    
+
 //display wins if win +1
 //dispay losses + 1
 //determine if you won or lost
@@ -73,7 +69,3 @@
     //winner ===t
     //if results === x , return t
 
-
-
-
-//show score? perhaps +xamt points per match

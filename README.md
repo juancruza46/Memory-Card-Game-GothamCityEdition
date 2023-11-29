@@ -14,13 +14,12 @@ Javascript
 
 User Stories:
 As a user I woulld like to :
-    - enter my name before launching a new game
-    - choose the color of the cards (theme)
+
     - start a new game once I click the button
     - be allowed to choose any 12 cards, in whichever order
-    - I would like to accumulate points for every match I earn
+    - I would like to know when i get a match
     - I would like to keep track of : time left, remining guesses, wins/losses
-    - If i win i would like to see: points earned, time spare, winner screen with my name
+    - If i win i would like to see: time spare, winner screen with my name
     - If i lose i would like to see: points earned, time left, guesses left, and reason for losing displayed
     - Upon the game over screen, I would like the option to return to menu or start a new gane 
 
@@ -75,6 +74,5 @@ if 5 minutes is reached and cards have not been matched, despite amount of error
 hide button
 Display timer at all times
 keep track of total games won/lost
-prompt user for a name 
-style cards with number ; animation
+style cards with color strings
 
