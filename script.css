@@ -1,5 +1,52 @@
+
 .flex-ctr {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    background-color: pink;
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 2vmin;
+}
+
+ #card-layout {
+    display:grid;
+    grid-template-columns: repeat(3, 18vmin);
+    grid-template-rows: repeat (4, 18vmin);
+    border: 1vmin solid back;
+    border-radius: 4vmin;
+    
+ }
+
+ #card-layout > div {
+    margin: 3vmin;
+    background-color: grey;
+    border: 1vmin solid black;
+    height: 10vmin;
+ }
+
+ #card-layout > div.avail {
+    cursor: pointer;
+  }
+  
+  #card-layout > div.avail:hover {
+    border-color: white;
+  }
+  
+.newGame {
+    justify-content: center;
+    width: 15vmin;
+    height: 2vmin;
+    background-color: black;
+    font: 4vmin;
+    color: white;
+    border: 1vmin solid black;
+    border-radius: 4vmin;
+
+}
+.newGame:hover {
+    background-color: red;
+    color: white;
 }
