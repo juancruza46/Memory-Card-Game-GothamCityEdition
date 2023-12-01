@@ -44,6 +44,7 @@ h1 {
     color: white;
     border: 1vmin solid black;
     border-radius: 4vmin;
+    display: flex;
 
 }
 .newGame:hover {

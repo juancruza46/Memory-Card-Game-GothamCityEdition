@@ -1,7 +1,10 @@
-//start menu 
-
 //start ganme button/hide event listener
     //document.getElementBYID"startButtonr".addEventListener("click", handleMove)
+const message = document.querySelector('h2');
+const playButton = document.querySelector('button');
+
+
+
 
 //Card amounts will be: 12
 //Cards will be randomly shuffled
@@ -68,4 +71,12 @@
     //function render scores ()
     //winner ===t
     //if results === x , return t
+function render () {
+    renderMessager();
+    playButton.diabled = !winner;
+}
+
+function renderMessage() {
+
+}
 
