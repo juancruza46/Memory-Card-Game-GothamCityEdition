@@ -10,27 +10,34 @@
 
 <body>
   <h1>CONCENTRATION-MEMORY GAME</h1>
-  <div class="card-layout">
-      <div class="cardPlaced"></div>
-      <div class="cardPlaced"></div>
-      <div class="cardPlaced"></div>
-      <div class="cardPlaced"></div>
-  </div>
+  <main>
+    <h2></h2>
+    <h3>Wins: </h3>
+    <h3>Timer: </h3>
+    <h3>Remaining attempts:</h3>
+    
+    <div class="card-layout">
+      <div class="slot frontCardRed backCard" onclick="flip(event)"></div>
+      <div class="slot frontCardRed backCard"onclick="flip(event)"></div>
+      <div class="slot frontCardBlue backCard"onclick="flip(event)"></div>
+      <div class="slot frontCardBlue backCard"onclick="flip(event)"></div>
+    </div>
 
-  <div class="card-layout">
-    <div class="cardPlaced"></div>
-    <div class="cardPlaced"></div>
-    <div class="cardPlaced"></div>
-    <div class="cardPlaced"></div>
-  </div>
+    <div class="card-layout">
+      <div class="slot frontCardGreen backCard"onclick="flip(event)"></div>
+      <div class="slot frontCardGreen backCard"onclick="flip(event)"></div>
+      <div class="slot frontCardYellow backCard"onclick="flip(event)"></div>
+      <div class="slot frontCardYellow backCard"onclick="flip(event)"></div>
+    </div>
 
-  <div class="card-layout">
-    <div class="cardPlaced"></div>
-    <div class="cardPlaced"></div>
-    <div class="cardPlaced"></div>
-    <div class="cardPlaced"></div>
-  </div>
-  <nButton class = "newGame">NEW GAME</Button>
+   <div class="card-layout">
+     <div class="slot frontCardPurple backCard"onclick="flip(event)"></div>
+     <div class="slot frontCardPurple backCard"onclick="flip(event)"></div>
+     <div class="slot frontCardOrange backCard"onclick="flip(event)"></div>
+     <div class="slot frontCardOrange backCard"onclick="flip(event)"></div>
+  
+    </div>
+    <button class = "newGame">NEW GAME</button>
   </main>
     <script src="script.js"></script>
 </body>

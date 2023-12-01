@@ -1,19 +1,11 @@
-//start ganme button/hide event listener
-    //document.getElementBYID"startButtonr".addEventListener("click", handleMove)
-
-
-
-
-
-
-    board = [
-        [1, 1, 0, 5], // col 0
-        [0, 2, 2, 5], // col 1
-        [3, 3, 7, 7], // col 2
-
-    ]
-
-    
+//start ganme button/hide event listene
+//Select a card addEventListener("click", handleMove)
+//Flip the card
+function flip(e) {
+    const selectedCard = e.currentTarget;
+    selectedCard.className = selectedCard.className.replace('backCard','').trim();
+}
+//Crete funtion if-else if 2 cards match: hide them, else flip them again and keep trying
 
 
 //Card amounts will be: 12
@@ -81,12 +73,3 @@
     //function render scores ()
     //winner ===t
     //if results === x , return t
-function render () {
-    renderMessager();
-    playButton.diabled = !winner;
-}
-
-function renderMessage() {
-
-}
-
