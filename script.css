@@ -1,40 +1,30 @@
-
-.flex-ctr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+body {
     background-color: pink;
 }
+.card-layout {
+    text-align: center;
+    
+}
+.cardPlaced{
+    cursor:pointer;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    
+}
+
+.cardPlaced:hover {
+    border: 1vmin solid black;
+    background-color: darkgrey;
+}
+
 h1 {
     margin-top: 0;
     margin-bottom: 2vmin;
+    text-align: center;
 }
 
- #card-layout {
-    display:grid;
-    grid-template-columns: repeat(3, 18vmin);
-    grid-template-rows: repeat (4, 18vmin);
-    border: 1vmin solid back;
-    border-radius: 4vmin;
-    
- }
-
- #card-layout > div {
-    margin: 3vmin;
-    background-color: grey;
-    border: 1vmin solid black;
-    height: 10vmin;
- }
-
- #card-layout > div.avail {
-    cursor: pointer;
-  }
-  
-  #card-layout > div.avail:hover {
-    border-color: white;
-  }
-  
 .newGame {
     justify-content: center;
     width: 15vmin;
@@ -44,7 +34,7 @@ h1 {
     color: white;
     border: 1vmin solid black;
     border-radius: 4vmin;
-    display: flex;
+    text-align: center;
 
 }
 .newGame:hover {

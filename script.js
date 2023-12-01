@@ -1,9 +1,19 @@
 //start ganme button/hide event listener
     //document.getElementBYID"startButtonr".addEventListener("click", handleMove)
-const message = document.querySelector('h2');
-const playButton = document.querySelector('button');
 
 
+
+
+
+
+    board = [
+        [1, 1, 0, 5], // col 0
+        [0, 2, 2, 5], // col 1
+        [3, 3, 7, 7], // col 2
+
+    ]
+
+    
 
 
 //Card amounts will be: 12
