@@ -1,12 +1,35 @@
 //start ganme button/hide event listene
 //Select a card addEventListener("click", handleMove)
-//Flip the card
+//declare state variables:
+let firstCard= null;
+let secondCard= null;
+//flip the cards over
 function flip(e) {
-    const selectedCard = e.currentTarget;
-    selectedCard.className = selectedCard.className.replace('backCard','').trim();
-}
-//Crete funtion if-else if 2 cards match: hide them, else flip them again and keep trying
+  const selectedCard = e.currentTarget;
+  selectedCard.className = selectedCard.className.replace('backCard', '').trim();
 
+//What occurs when two cards are chosen
+  if (firstCard === null) {
+    firstCard = selectedCard;
+  } else if (secondCard === null && selectedCard !== firstCard) {
+    secondCard = selectedCard;
+    if (firstCard.className === secondCard.className) {
+      //if cards match turn white; hide
+      firstCard.style.backgroundColor = 'white';
+      secondCard.style.backgroundColor = 'white';
+      firstCard = null;
+      secondCard = null;
+    } else {
+      setTimeout(() => {
+        //if cardss do not match flip back to origin state
+        firstCard.className += ' backCard';
+        secondCard.className += ' backCard';
+        firstCard = null;
+        secondCard = null;
+      }, 200);
+    }
+  }
+}
 
 //Card amounts will be: 12
 //Cards will be randomly shuffled
