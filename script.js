@@ -86,6 +86,21 @@ function flip(e) {
     //else take another action
     //use the style.visibility to hide timer
     //milliseconds unit
+    //assign to h3
+    let timer = 150;//or 3 min
+    let countDown = document.querySelector('h3');//assign to h3
+    //function for countdown, make sure it works before adding to top function
+    let interval = setInterval(() => {
+        timer--;
+        countDown.textContent = `Timer: ${timer}`;
+    if (timer <= 0) {
+        clearInterval(interval);
+        console.log('out of time');
+  }
+}, 1000);
+
+
+
 
 //display wins if win +1
 //dispay losses + 1
