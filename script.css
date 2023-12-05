@@ -1,7 +1,8 @@
-
+main{
+    height: 100vh;
+}
 body {
     background-color: pink;
-
 }
 .card-layout {
     text-align: center;
@@ -60,20 +61,9 @@ h1 {
 }
 
 .newGame {
-    justify-content: center;
-    width: 15vmin;
-    height: 2vmin;
-    background-color: black;
-    font: 4vmin;
-    color: white;
-    border: 1vmin solid black;
-    border-radius: 4vmin;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    position: right;
-
-
+   display:flex;
+   justify-content: center;
+   align-items: center;
 }
 .newGame:hover {
     background-color: red;
