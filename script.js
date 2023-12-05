@@ -3,6 +3,10 @@
 //declare state variables:
 let firstCard= null;
 let secondCard= null;
+
+//Create a constant message display
+const message = document.querySelector('h4');
+
 //flip the cards over
 function flip(e) {
   const selectedCard = e.currentTarget;
@@ -19,6 +23,7 @@ function flip(e) {
       secondCard.style.backgroundColor = 'white';
       firstCard = null;
       secondCard = null;
+      message.innerHTML = 'You Got A Match!';
     } else {
       setTimeout(() => {
         //if cardss do not match flip back to origin state
@@ -26,68 +31,13 @@ function flip(e) {
         secondCard.className += ' backCard';
         firstCard = null;
         secondCard = null;
+        message.innerHTML = 'Not a natch!';
       }, 200);
     }
   }
 }
 
-//Card amounts will be: 12
-//Cards will be randomly shuffled
-    //const shuffle
-    //for loop (let i=0; i < deck.length; i++)
-    //math floor/random function
-
-    //new temporary array
-    //deck [1] = deck[shuffle]
-    // figure out how to spread them
-
-
-//Cards will remain faced down until clicked upon event listeer
-    //function that will allow you to flip a card()
-    //seclect all cards query selector
-    //go through every card arrow function (click, flipcard)
-
-
-//When clicked cards will be revealed ( 2 at a time
-//if a match = remove cards
-//if not a match, flip over again, prmpt user to try again
-    //if (===)
-       // return : x 
-       // Display "match" message ! & hide
-        //else flip back over, minus one guess 
-
-//the player will have a total of 5 errors
-//if 5 errors threshold is reached, display : game over
-    //function limits attempts ()
-    //if (guesses=0, if guesses >5, guesses++)
-        // game over
-    //else try again
-
-//WIN OR LOSE
-//display you lost 
-//new game button
-//if all cards have been matched, display : game over you won
-//new game button
-    //function render ()
-    //if winner === matchedAll 
-    //text inner html (Winner) 
-        //display points, time, attempts
-    //else inner html (loser)
-        //display points, time, attempts
-
-//create a timer of 5 minutes
-//if 5 minutes is reached and cards have not been matched, despite amount of errors display game over you lose 
-//new game button
-    
-//display timer 5 minutes: counts down
-    //constant timer id = set interval 
-    //count -- minus
-    //if count is truthy take action
-    //else take another action
-    //use the style.visibility to hide timer
-    //milliseconds unit
-    //assign to h3
-    let timer = 150;//or 3 min
+    let timer = 50;//or 3 min
     let countDown = document.querySelector('h3');//assign to h3
     //function for countdown, make sure it works before adding to top function
     let interval = setInterval(() => {
@@ -95,19 +45,7 @@ function flip(e) {
         countDown.textContent = `Timer: ${timer}`;
     if (timer <= 0) {
         clearInterval(interval);
-        console.log('out of time');
+        message.innerHTML = 'Out of Time!';
   }
 }, 1000);
 
-
-
-
-//display wins if win +1
-//dispay losses + 1
-//determine if you won or lost
-    //reults will be w ond l
-    //winner === 
-
-    //function render scores ()
-    //winner ===t
-    //if results === x , return t
