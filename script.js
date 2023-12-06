@@ -1,15 +1,31 @@
 //declare state variables:
 let firstCard= null;
 let secondCard= null;
-let remainingAttempts = 5;
+let remainingAttempts = 7;
 let allCards = document.querySelectorAll('.slot');
-//randomize deck
 
+//randomize deck: step one create a deck array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+//Get all card layouts
+const cardLayouts = document.querySelectorAll('.card-layout');
+
+//Shuffle all the slots, using the deck array created
+cardLayouts.forEach(cardLayout => {
+  const slots = Array.from(cardLayout.children);
+  shuffleArray(slots);
+  slots.forEach(slot => cardLayout.appendChild(slot));
+});
 
 //Create a constant message display 
 const message = document.querySelector('h2');
 
-//add event listeners when you select a card
+//add event listeners when you select a card: flip
 function flip(e) {
   const selectedCard = e.currentTarget;
   selectedCard.className =   
@@ -26,11 +42,12 @@ if (firstCard === null) {
       //if cards match turn white; hide
       firstCard.style.backgroundColor = 'white';
       secondCard.style.backgroundColor = 'white';
+      
       //Clear cards chosen
       firstCard = null;
       secondCard = null;
       message.innerHTML = 'You Got A Match!';
-
+      
       //if all cards match end game
       let allMatched = true;
       allCards.forEach(card => {
@@ -44,26 +61,26 @@ if (firstCard === null) {
        
       }
     } else {
-      //stop the clock
+      //if they do not match, flip back, reset
        setTimeout(() => {
         firstCard.className += ' backCard';
         secondCard.className += ' backCard';
         firstCard = null;
         secondCard = null;
-         remainingAttempts --;
+        remainingAttempts --;
+        //Display remaining attempts
          document.querySelector('h4').textContent = `Attempt(s): ${remainingAttempts}`;
          if (remainingAttempts <= 0) {
            clearInterval(interval);
            message.innerHTML = 'OUT OF LIVES! JOKER WINS!';
          }
         message.innerHTML = 'Not a match!';
-
       }, 200);
     }
   }
 }
 //Create a timer, if it runs out = you lose
-    let timer = 50;
+    let timer = 100;
     let countDown = document.querySelector('h3');
     let interval = setInterval(() => {
         timer--;
@@ -81,7 +98,6 @@ newGameButton.addEventListener("click", () => {
   //testing button funtionality ; FIX LATER
   location.reload();
 });
-
 
 
 
