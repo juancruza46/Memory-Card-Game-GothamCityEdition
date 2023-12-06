@@ -1,76 +1,96 @@
-main{
-    height: 100vh;
-}
-body {
-    background-color: pink;
-}
-.card-layout {
+* {
     text-align: center;
-
-}
-.slot{
-    cursor:pointer;
-    display: inline-block;
-    width: 75px;
-    height: 100px;
-    border-radius: 5px;
-
-}
-
-.slot:hover {
-    border: 5px solid black;
-  opacity: 75%;
+  }
+  
+  body {
+    background-image: url("https://wallpapercave.com/wp/wp7201486.jpg");
+    grid-area:main;
+    background-size: cover;
+  }
+  
+  .card-layout {
+      text-align: center;
+  }
+  
+  .slot{
+      cursor:pointer;
+      display: inline-block;
+      width: 75px;
+      height: 100px;
+      border-radius: 5px;
+  }
+  
+  .slot:hover {
+      border: 5px solid black;
+    opacity: 75%;
+  }
+  
+  h1 {
+      margin-top: 0;
+      margin-bottom: 2vmin;
+      text-align: center;
+      color: black;
+      border: 1vmin solid black;
+    background-color: grey;
+  }
+  
+  .frontCardRed {
+      background-color: red;
+      border: 5px solid black;  
+  }
+  .frontCardBlue{
+      background-color: blue;
+      border: 5px solid black;
+  }
+  .frontCardGreen {
+      background-color: green;
+      border: 5px solid black;
+  }
+  .frontCardYellow {
+      background-color: yellow;
+      border: 5px solid black;
+  }
+  .frontCardPurple{
+      background-color: purple;
+      border: 5px solid black;
+  }
+  .frontCardOrange {
+      background-color: orange;
+      border: 5px solid black;
+  }
+  .backCard {
+      background-color: gray;
+      border: 1vmin solid black;
+  }
+  
+  .message {
+    text-align: center;
+    color: white;
+  }
+  
+  #newGame {
+    width: 150px;
+    height: 50px;
+    text-align: center;
     
-}
-
-h1 {
-    margin-top: 0;
-    margin-bottom: 2vmin;
-    text-align: center;
-}
-
-.frontCardRed {
-    background-color: red;
-    border: 5px solid black;  
-
-}
-.frontCardBlue{
-    background-color: blue;
-    border: 5px solid black;
-}
-.frontCardGreen {
-    background-color: green;
-    border: 5px solid black;
-}
-.frontCardYellow {
-    background-color: yellow;
-    border: 5px solid black;
-}
-.frontCardPurple{
-    background-color: purple;
-    border: 5px solid black;
-}
-.frontCardOrange {
-    background-color: orange;
-    border: 5px solid black;
-}
-
-.backCard {
+  }
+  button {
+    border-radius: 10%;
+    font-family: inherit;
+    border:1vmin solid black;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background-color: gray;
+  }
+  
+  h3, h4{
     background-color: gray;
     border: 1vmin solid black;
-}
-
-.newGame {
-   display:flex;
-   justify-content: center;
-   align-items: center;
-}
-.newGame:hover {
-    background-color: red;
-    color: white;
-    border: 1vmin solid red;
-}
-
-.timer , .message {
+    width: 150px;
     text-align: center;
-}
+    font-size: 3vmin;
+  }
+  
+  

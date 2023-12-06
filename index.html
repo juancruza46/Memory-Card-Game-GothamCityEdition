@@ -10,10 +10,11 @@
 
 <body>
   <h1>CONCENTRATION-MEMORY GAME</h1>
-  <main>
-    <h3 class ="timer"></h3>
-    <h4 class ="message"></h4>
-    
+    <h2 class ="message">MATCH ALL CARDS BEORE TIME RUNS OUT!</h2>
+    <h3 class ="timer">Timer:50</h3>
+    <h4 class ="chances">Attempt(s): 5</h4>
+    <h5></h5>
+
     <div class="card-layout">
       <div class="slot frontCardRed backCard" onclick="flip(event)"></div>
       <div class="slot frontCardRed backCard"onclick="flip(event)"></div>
@@ -34,8 +35,7 @@
      <div class="slot frontCardOrange backCard"onclick="flip(event)"></div>
      <div class="slot frontCardOrange backCard"onclick="flip(event)"></div>
     </div>
-    
-  </main>
-  <button class ="newGame">NEW GAME</button>
+
+  <button id ="newGame">NEW GAME</button>
     <script src="script.js"></script>
 </body>

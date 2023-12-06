@@ -3,19 +3,21 @@ let firstCard= null;
 let secondCard= null;
 
 //Create a constant message display 
-const message = document.querySelector('h4');
+const message = document.querySelector('h2');
 
 //add event listeners when you select a card
 function flip(e) {
   const selectedCard = e.currentTarget;
-  selectedCard.className = selectedCard.className.replace('backCard', '').trim();
+  selectedCard.className =   
+  selectedCard.className.replace('backCard', '').trim();
 
 //What occurs when two cards are chosen
-  if (firstCard === null) {
-    firstCard = selectedCard;
-  } else if (secondCard === null && selectedCard !== firstCard) {
-    secondCard = selectedCard;
-    if (firstCard.className === secondCard.className) {
+if (firstCard === null) {
+  firstCard = selectedCard;
+  } else if (secondCard === null && selectedCard !== 
+     firstCard) {
+     secondCard = selectedCard;
+     if (firstCard.className === secondCard.className) {
      
       //if cards match turn white; hide
       firstCard.style.backgroundColor = 'white';
@@ -35,18 +37,18 @@ function flip(e) {
       });
       if (allMatched) {
         clearInterval(interval);
-        message.innerHTML = 'You Win!';
+        message.innerHTML = 'YOU DEFEATED THE JOKER!';
+       
       }
     } else {
       //stop the clock
-      setTimeout(() => {
-        
-        //if cardss do not match flip back to origin state
+       setTimeout(() => {
         firstCard.className += ' backCard';
         secondCard.className += ' backCard';
         firstCard = null;
         secondCard = null;
         message.innerHTML = 'Not a match!';
+
       }, 200);
     }
   }
@@ -59,8 +61,18 @@ function flip(e) {
         countDown.textContent = `Timer: ${timer}`;
     if (timer <= 0) {
         clearInterval(interval);
-        message.innerHTML = 'Out of Time!';
+        message.innerHTML = 'Out of Time! Joker Wins !';
       
   }
 }, 1000);
+
+//new game- button
+const newGameButton = document.getElementById("newGame");
+newGameButton.addEventListener("click", () => {
+  //testing button funtionality ; FIX LATER
+  location.reload();
+});
+
+
+
 
