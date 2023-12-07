@@ -1,7 +1,7 @@
 # concentration-project
 
-Title : Concentration Memory Game 
-About : Concentration is a memory game, in which a player has cards faced down in front of them, and have to flip over two at a time in search of a match. (Can be rounc bases if other players are active) The game is over, when all cards have been matched or the player has run out of turns.
+Title : Concentration - Memory Game (Gotham Edition)
+About : Concentration is a memory game, in which a player has cards faced down in front of them, and have to flip over two at a time in search of a match. If the two cards match you eiminate them, if they do not you flip them over again. The game is over, when all cards have been matched or the player has run out of attempts/time.
 
 // --------------------------------
 
@@ -15,11 +15,11 @@ Javascript
 User Stories:
 As a user I woulld like to :
 
-    - start a new game once I click the button
-    - be allowed to choose any 12 cards, in whichever order
+    - start a new game once I click the start button
+    - be allowed to choose any 12 cards freely
     - I would like to know when i get a match
     - I would like to keep track of : time left, remining guesses, wins/losses
-    - If i win i would like to see: time spare, winner screen with my name
+    - If i win i would like to see: time spare, winner screen
     - If i lose i would like to see: points earned, time left, guesses left, and reason for losing displayed
     - Upon the game over screen, I would like the option to return to menu or start a new gane 
 
@@ -29,7 +29,7 @@ URL wire fram: https://imgur.com/a/5W1gH37
 
 1. displays menu - new game button
 2. cards shuffled
-3. game started, 4 guesses left, w, l, timer
+3. game started, 7 guesses left, w, l, timer
 4. game over: too slow (timer up)
 5. last cards matched
 6. winner display
@@ -43,7 +43,7 @@ URL wire fram: https://imgur.com/a/5W1gH37
 Pseudocode:
 Create boilerplate for HTML ; create JS ; create CSS file
 
-Create a stat menu & start new game button
+Create a start game button
 
 Card amounts will be: 12
 
@@ -57,9 +57,9 @@ if a match = remove cards
 
 if not a match, flip over again
 
-the player will have a total of 5 errors
+the player will have a total of (7) errors
 
-if 5 errors threshold is reached, display : game over
+if 7 errors threshold is reached, display : game over
 
 display you lost 
 - new game button
@@ -67,14 +67,13 @@ display you lost
 if all cards have been matched, display : game over you won
 - new game button
 
-create a time of 5 minutes
-if 5 minutes is reached and cards have not been matched, despite amount of errors display game over you lose 
-- new gamr button
+create a time of x minutes
+if x minutes is reached and cards have not been matched, despite amount of errors display game over you lose 
+- new game button
 
 hide button
 Display timer at all times
-keep track of total games won/lost
-style cards with color strings
+
 
 Concentration : 2.0 - What's next for the game?
 - Difficulty options will be added : increase in deck size, lower/higher time limits & attempts
@@ -84,3 +83,5 @@ Concentration : 2.0 - What's next for the game?
 - New score displays/ trackers
 - A point system will be added to award more comptetive players
 - 2 player: one turn each round based mode will be added
+- keep track of total games won/lost
+- More sound effects
