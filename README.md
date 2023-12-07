@@ -1,6 +1,6 @@
 # concentration-project
 
-Title : Concentration Memorry Game 
+Title : Concentration Memory Game 
 About : Concentration is a memory game, in which a player has cards faced down in front of them, and have to flip over two at a time in search of a match. (Can be rounc bases if other players are active) The game is over, when all cards have been matched or the player has run out of turns.
 
 // --------------------------------
@@ -76,3 +76,11 @@ Display timer at all times
 keep track of total games won/lost
 style cards with color strings
 
+Concentration : 2.0 - What's next for the game?
+- Difficulty options will be added : increase in deck size, lower/higher time limits & attempts
+- New hero themes, choice to pick new backdrops & different card images
+- Option to prompt user for : name
+- New game clips will be added, upon winning or losing the game will cut to visual scenes
+- New score displays/ trackers
+- A point system will be added to award more comptetive players
+- 2 player: one turn each round based mode will be added

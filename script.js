@@ -1,12 +1,16 @@
 //declare state variables:
 let firstCard= null;
 let secondCard= null;
+//Attempts display
 let remainingAttempts = 7;
 let allCards = document.querySelectorAll('.slot');
+let gameEnded = false; //turn off game
 
-//randomize deck: step one create a deck array
+//randomize deck:
 function shuffleArray(array) {
+  //goes through the array - reverse
   for (let i = array.length - 1; i > 0; i--) {
+    //random num 0-1 + swap element position
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
@@ -17,6 +21,7 @@ const cardLayouts = document.querySelectorAll('.card-layout');
 
 //Shuffle all the slots, using the deck array created
 cardLayouts.forEach(cardLayout => {
+  //grabbing all the "cards" inside each row
   const slots = Array.from(cardLayout.children);
   shuffleArray(slots);
   slots.forEach(slot => cardLayout.appendChild(slot));
@@ -27,15 +32,19 @@ const message = document.querySelector('h2');
 
 //add event listeners when you select a card: flip
 function flip(e) {
+  if (gameEnded){
+    return;//hides the cards
+  }
+  
   const selectedCard = e.currentTarget;
-  selectedCard.className =   
-  selectedCard.className.replace('backCard', '').trim();
+  selectedCard.className = selectedCard.className.replace('backCard', '').trim();
 
 //What occurs when two cards are chosen
 if (firstCard === null) {
+  //firstCard is assigned the value of the current selected card
   firstCard = selectedCard;
-  } else if (secondCard === null && selectedCard !== 
-     firstCard) {
+  //Verifys the selection of the second card, green light
+  } else if (secondCard === null && selectedCard !== firstCard) {
      secondCard = selectedCard;
      if (firstCard.className === secondCard.className) {
      
@@ -48,17 +57,20 @@ if (firstCard === null) {
       secondCard = null;
       message.innerHTML = 'You Got A Match!';
       
-      //if all cards match end game
+      //Verify if al cards are matched
       let allMatched = true;
       allCards.forEach(card => {
+        //a card doesnt have a new bg yet, or all cards aren't white, game is not done
         if (!card.style.backgroundColor || card.style.backgroundColor !== 'white') {
           allMatched = false;
         }
       });
       if (allMatched) {
         clearInterval(interval);
-        message.innerHTML = 'YOU DEFEATED THE JOKER!';
-       
+        gameEnded = true; //end game here
+        message.innerHTML = 'YOU DEFEATED THE JOKER!'; 
+        const winAudio = document.getElementById('winner');
+           winAudio.play();
       }
     } else {
       //if they do not match, flip back, reset
@@ -67,26 +79,35 @@ if (firstCard === null) {
         secondCard.className += ' backCard';
         firstCard = null;
         secondCard = null;
-        remainingAttempts --;
-        //Display remaining attempts
-         document.querySelector('h4').textContent = `Attempt(s): ${remainingAttempts}`;
-         if (remainingAttempts <= 0) {
-           clearInterval(interval);
-           message.innerHTML = 'OUT OF LIVES! JOKER WINS!';
+
+         //Keeps it from going negative
+         if (remainingAttempts > 0) {
+            remainingAttempts --;
+            document.querySelector('h4').textContent = `Attempt(s): ${remainingAttempts}`;
          }
-        message.innerHTML = 'Not a match!';
+        //Display remaining attempts
+         if (remainingAttempts <= 0 && !gameEnded) {
+           clearInterval(interval);
+           gameEnded = true;
+           message.innerHTML = 'OUT OF TRIES! JOKER WINS!';
+         } else {
+          message.innerHTML = 'Not a match!';
+           const jokerLaughAudio = document.getElementById('jokerLaugh');
+           jokerLaughAudio.play();
+         }
       }, 200);
     }
   }
 }
 //Create a timer, if it runs out = you lose
-    let timer = 100;
+    let timer = 40;
     let countDown = document.querySelector('h3');
     let interval = setInterval(() => {
         timer--;
         countDown.textContent = `Bomb Timer: ${timer}`;
     if (timer <= 0) {
         clearInterval(interval);
+        gameEnded = true;
         message.innerHTML = 'The Bomb Exploded! Joker Wins!';
       
   }
@@ -98,6 +119,4 @@ newGameButton.addEventListener("click", () => {
   //testing button funtionality ; FIX LATER
   location.reload();
 });
-
-
 
