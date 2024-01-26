@@ -37,6 +37,15 @@ URL wire fram: https://imgur.com/a/5W1gH37
 8. display game over loser
 
 // need to add new game button after game over screen is displayed
+//----------------------------------------------------------------
+Screenshots:
+
+<img width="1436" alt="Screenshot 2024-01-26 at 4 42 43 PM" src="https://github.com/juancruza46/Memory-Card-Game-GothamCityEdition/assets/150645094/36dbc084-36ad-4f79-b586-2d382f8777c2">
+
+<img width="1427" alt="Screenshot 2024-01-26 at 4 43 24 PM" src="https://github.com/juancruza46/Memory-Card-Game-GothamCityEdition/assets/150645094/ca191c15-fb0c-450f-b0e7-0b0f9945d504">
+
+<img width="1434" alt="Screenshot 2024-01-26 at 4 43 42 PM" src="https://github.com/juancruza46/Memory-Card-Game-GothamCityEdition/assets/150645094/b4cbc64c-24c5-49b3-b6c3-d88b18d65b4c">
+
 
 //----------------------------------------------------------------
 
